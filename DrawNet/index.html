@@ -7,7 +7,7 @@
   <meta name="description"
     content="Probably the most complete UI kit out there. Multiple functionalities and controls added,  extended color palette and beautiful typography, designed as its own extended version of Bootstrap at  the highest level of quality.                             ">
   <meta name="author" content="Webpixels">
-  <title>DrawNet: A neural painting network</title>
+  <title>DrawNet: A neural painting network with attention module</title>
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800|Roboto:400,500,700" rel="stylesheet">
   <!-- Theme CSS -->
@@ -29,29 +29,30 @@
           <div class="dropdown-divider d-lg-none my-4"></div>
           <h6 class="dropdown-header font-weight-600 d-lg-none px-0">Social Media</h6>
           <li class="nav-item">
-            <a class="nav-link nav-link-icon" href="#" target="_blank"><i
-                class="fab fa-instagram"></i><span class="ml-2 d-lg-none">Instagram</span></a>
+            <a class="nav-link nav-link-icon" href="#" target="_blank"><i class="fab fa-instagram"></i><span
+                class="ml-2 d-lg-none">Instagram</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link nav-link-icon" href="#" target="_blank"><i
-                class="fab fa-facebook"></i><span class="ml-2 d-lg-none">Facebook</span></a>
+            <a class="nav-link nav-link-icon" href="#" target="_blank"><i class="fab fa-facebook"></i><span
+                class="ml-2 d-lg-none">Facebook</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link nav-link-icon" href="#" target="_blank"><i
-                class="fab fa-dribbble"></i><span class="ml-2 d-lg-none">Dribbble</span></a>
+            <a class="nav-link nav-link-icon" href="#" target="_blank"><i class="fab fa-dribbble"></i><span
+                class="ml-2 d-lg-none">Dribbble</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link nav-link-icon" href="#" target="_blank"><i
-                class="fab fa-github"></i><span class="ml-2 d-lg-none">Github</span></a>
+            <a class="nav-link nav-link-icon" href="#" target="_blank"><i class="fab fa-github"></i><span
+                class="ml-2 d-lg-none">Github</span></a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
   <main class="main">
-    <section class="spotlight parallax bg-cover bg-size--cover" data-spotlight="fullscreen" style="background-image: url('assets/images/top.png')">
+    <section class="spotlight parallax bg-cover bg-size--cover" data-spotlight="fullscreen"
+      style="background-image: url('assets/images/top.png')">
       <!-- style="background-image: url('assets/images/backgrounds/img-1.jpg')" -->
-      <span class="mask bg-primary alpha-7"></span>
+      <span class="mask alpha-7" style="background-color:#b2b3a4;"></span>
       <div class="spotlight-holder py-lg pt-lg-xl">
         <div class="container d-flex align-items-center no-padding">
           <div class="col">
@@ -61,11 +62,11 @@
                   <!-- <img src="assets/images/brand/icon.png" style="width: 200px;" class="img-fluid animated" data-animation-in="jackInTheBox" data-animation-delay="1000"> -->
                   <h2 class="heading display-4 font-weight-400 text-white mt-5 animated" data-animation-in="fadeInUp"
                     data-animation-delay="2000">
-                    <span class="font-weight-700">DrawNet: A neural painting network</span>
+                    <span class="font-weight-700">DrawNet: A neural painting network with attention module</span>
                   </h2>
                   <p class="lead text-white mt-3 lh-180 c-white animated" data-animation-in="fadeInUp"
                     data-animation-delay="2500">
-                    1st Author Name <span><sup>a</sup></span>, 2nd Author Name, 3rd Author Name<strong
+                    Fachao Zhang <span><sup>a</sup></span>, Xiaoman Liang<sup>a,b</sup>, 3rd Author Name<strong
                       class="text-white"></strong>
                   </p>
 
@@ -105,13 +106,13 @@
               </svg> <span style="font-size: 16px;"><a href="#">[Code]</a></span>
             </div>
             <div class="row align-items-center mb-4">
-              <div class="col-4">
+              <div class="col-6">
                 <img style="width: 100%;" src="assets/images/pandans_animated.mp4_20221227_154420.gif" />
               </div>
-              <div class="col-4">
+              <div class="col-6">
                 <img style="width: 100%;" src="assets/images/sunflowers_animated.mp4_20221227_154715.gif" />
               </div>
-              <div class="col-4">
+              <div class="col-6">
                 <img style="width: 100%;" src="assets/images/square_animated.mp4_20221227_154817.gif" />
               </div>
             </div>
@@ -128,12 +129,18 @@
             </div>
             <div class="row typeface-palette cols-xs-space cols-sm-space cols-md-space">
               <div class="col-sm-12">
-                <p style="text-align:justify;text-indent:2em">In this paper, we propose a new image to painting
-                  translation method that can generate paintings on a
-                  stroke by stroke basis. Unlike previous pixel-to-pixel or sequential optimization methods, our method
-                  generates a set of physically meaningful stroke parameters that can be further rendered using a
-                  renderer. Experimental results show that our renderer improves the PSNR by 3.7% over previous
-                  renderers. Our code and more results are available at <span><a>https://zhangfc7.github.io/</a></span>
+                <p style="text-align:justify;text-indent:2em">In this paper, we propose a new image-to-painting
+                  translation method that can generate paintings on a stroke by stroke basis. Unlike
+                  previous pixel-to-pixel or sequential optimization methods, our method generates a set of physically
+                  meaningful stroke parameters that can be
+                  further rendered using a renderer. We add an attention mechanism network to the proposed renderer to
+                  improve the quality of the painting images,
+                  and use Smooth Ll loss in the training process of the renderer to make the model converge faster.
+                  Experimental results show that our renderer
+                  outperforms other renderers and improves the PSNR evaluation metric by 3.7% over the previous
+                  renderer. Our code and more results are
+                  available at <span><a
+                      href="https://zhangfc7.github.io/DrawNet/">https://zhangfc7.github.io/DrawNet/</a></span>
                 </p>
               </div>
             </div>
@@ -146,20 +153,38 @@
                 <a href="docs/colors.html" class="btn btn-sm btn-primary">Open in Docs</a>
               </div> -->
             </div>
-            <p style="text-indent: 2em;">Our method is shown in the figure below.</p>
 
+            <p style="text-indent: 2em;">The flowchart of our DrawNet is shown in Fig. 1. </p>
+            <!-- <p>  When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are
+              \[x = {-b \pm \sqrt{b^2-4ac} \over 2a}.\]
+            </p> -->
+            
             <img src="assets/images/flow.png" style="width: 100%;" />
-
+            <p style="text-align: center; margin-top: 8px;font-weight: 700;">Figure 1. Flow Chart</p>
 
             <div class="row align-items-center mb-4 mt-lg">
               <div class="col-8">
                 <h2 class="heading h3 mb-0">Network</h2>
               </div>
             </div>
-            <p style="text-indent: 2em;">Our network structure is shown in the figure below.</p>
+            <p style="text-indent: 2em;text-align: justify;">In this paper we propose a novel network named DrawNet, which consists of two convolutional neural networks: a Shading network, which 
+              accepts color and shape parameters for generating foreground strokes with color, and a Rasteriztion network, which ignores stroke color and 
+              generates clear stroke. The structure of DrawNet is shown in Figure 2.
+              Shading network mainly consists of up-sampling, convolution, BatchNormal, ReLU activation function and other modules. The main 
+              methods of upsampling are: transposed convolution, nearest neighbor interpolation, bilinear interpolation, etc. Although transposed convolution 
+              has shown good results in many fields, the "tessellation effect" occurs if the convolution kernel size is not divisible by the step size [15]. In the 
+              upsampling module of the Shading network we use bilinear interpolation, which does not need to learn any parameters, which speeds up the 
+              computation of the model.The Rasteriztion network is mainly composed of fully connected, ReLU, convolution, and Pixel shuffle [16] modules, 
+              and we add a fully connected layer followed by A MoblieVit2Attention module [17] was added after the fully connected layer and better output 
+              was observed.
+              </p>
 
             <img src="assets/images/network.png" style="width: 100%;" />
-
+            <p style="text-align: center; margin-top: 8px;font-weight: 700;padding-left: 50px;padding-right: 50px;">
+              Figure 2. The network structure of DrawNet, K is the kernel size, C is the number of feature maps, S is
+              the step size in each convolutional layer,
+              and M and N are the scaling factors.
+            </p>
 
             <div class="row align-items-center mb-4 mt-lg">
               <div class="col-8">
@@ -180,7 +205,7 @@
               process.</p>
 
             <img src="assets/images/val_psnr2.png" style="width: 100%;" />
-
+            <p style="text-align: center; margin-top: 8px;font-weight: 700;">Figure 3. Variation curves of PSNR and SSIM during the training process</p>
 
 
             <div class="row align-items-center mb-4 mt-lg">
@@ -191,6 +216,7 @@
             <p style="text-indent: 2em;"></p>
 
             <img src="assets/images/result.png" style="width: 100%;" />
+            <p style="text-align: center; margin-top: 8px;font-weight: 700;">Figure 4.  Experimental results, (a): input (b): oilpaint (c): watercolor (d): markerpen (e): crayon</p>
 
 
 
@@ -201,12 +227,28 @@
             </div>
             <p style="text-indent: 2em;"></p>
             <img src="assets/images/style_transfer_result.png" style="width: 100%;" />
+            <p style="text-align: center; margin-top: 8px;font-weight: 700;">Figure 5.  Style transfer results</p>
+
+            <div class="row align-items-center mb-4 mt-lg">
+              <div class="col-8">
+                <h2 class="heading h3 mb-0">References</h2>
+              </div>
+            </div>
+
+            <ul>
+              <li>[1] Zou Z, Shi T, Qiu S, et al. Stylized neural painting[C].Proceedings of the IEEE/CVF Conference on
+                Computer Vision and Pattern Recognition. 2021: 15689-15698.</li>
+              <li>[2] Liu S, Lin T, He D, et al. Paint transformer: Feed forward neural painting with stroke
+                prediction[C].Proceedings of the IEEE/CVF international conference on computer vision. 2021: 6598-6607.
+              </li>
+            </ul>
+
           </div>
         </div>
       </div>
     </section>
   </main>
-  <!-- <footer class="pt-5 pb-3 footer  footer-dark bg-tertiary">
+  <footer class="pt-5 pb-3 footer  footer-dark bg-tertiary">
     <div class="container">
       <div class="row">
         <div class="col-12 col-md-4">
@@ -281,11 +323,17 @@
         </ul>
       </div>
     </div>
-  </footer> -->
+  </footer>
   <!-- Core -->
   <script src="./assets/vendor/jquery/jquery.min.js"></script>
   <script src="./assets/vendor/popper/popper.min.js"></script>
   <script src="./assets/js/bootstrap/bootstrap.min.js"></script>
+  <!-- math -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+
+
   <!-- FontAwesome 5 -->
   <script src="./assets/vendor/fontawesome/js/fontawesome-all.min.js" defer></script>
   <!-- Page plugins -->
